@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="ui hidden divider"></div>
+
+<div class="ui container">
+	<h2 class="ui header">Latest Posts</h2>
+
+	<div class="ui list vertical segment">
+		{% for post in site.posts %}
+		<div class="item">
+
+			{% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+			<h6 class="header">{{ post.date | date: date_format }}</h6>
+
+			<h3 class="header">
+				<a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
+			</h3>
+
+			<div class="description">{{ post.excerpt | markdownify | truncatewords: 50 }}</div>
+
+		</div>
+		{% endfor %}
+	</div>
+</div>
