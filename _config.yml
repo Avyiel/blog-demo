@@ -13,7 +13,7 @@ description: >-
 owner: Lucas Vienna
 email: dev@lucasvienna.dev
 url: https://avyiel.github.io # the custom domain you configure ealier
-baseurl: /blog-demo # what comes after the '.io'
+baseurl:  # what comes after the '.io'
 repository: Avyiel/lucasvienna.dev # only the path part of the repository URL
 
 # Blogging Defaults
